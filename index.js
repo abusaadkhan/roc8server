@@ -1,7 +1,8 @@
 const express = require('express')
+const cors = require('cors');
 const app = express()
 
-
+app.use(cors())
 const port = 5000 
 
 // endpoint : https://devcore02.cimet.io/v1/generate-token
@@ -21,7 +22,7 @@ app.get(`/`, async function (req, res) {
 		method: 'POST',
 		headers: {
 			'Api-key': '4NKQ3-815C2-8T5Q2-16318-55301',
-            'Access-Control-Allow-Origin': 'https://roc8.pixelperfect.quest/exam'
+            'Access-Control-Allow-Origin': '*'
 		}
 	};
 	// promise syntax
